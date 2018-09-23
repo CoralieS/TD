@@ -1,0 +1,35 @@
+AppBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        pseudo:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: 255
+            unique: true
+        dateBirth:
+            type: datetime
+        dateBdd:
+            type: datetime
+    lifecycleCallbacks: {  }
+    manyToMany:
+      movie:
+        targetEntity: Movie
+        inversedBy: user
+        joinTable:
+          name: user_movie
+          joinColumns:
+            user_id:
+              referencedColumnName: id
+          inverseJoinColumns:
+            movie_id:
+              referencedColumnName: id

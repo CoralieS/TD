@@ -1,0 +1,24 @@
+movie_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Movie:index" }
+    methods:  GET
+
+movie_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Movie:show" }
+    methods:  GET
+
+movie_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Movie:new" }
+    methods:  [GET, POST]
+
+movie_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Movie:edit" }
+    methods:  [GET, POST]
+
+movie_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Movie:delete" }
+    methods:  DELETE

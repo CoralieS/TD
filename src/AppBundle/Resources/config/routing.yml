@@ -1,0 +1,9 @@
+app_user:
+    resource: "@AppBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+app_movie:
+    resource: "@AppBundle/Resources/config/routing/movie.yml"
+    prefix:   /movie
+
+
